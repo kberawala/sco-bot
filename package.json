@@ -1,0 +1,42 @@
+{
+    "name": "sco-bot",
+    "version": "1.0.0",
+    "description": "SCOBot npm package",
+    "private": true,
+    "scripts": {
+        "test": "karma start karma.conf.js",
+        "build": "webpack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/abeluzhenko/sco-bot.git"
+    },
+    "keywords": [
+        "scorm",
+        "scobot",
+        "typescript"
+    ],
+    "author": "abeluzhenko",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/abeluzhenko/sco-bot/issues"
+    },
+    "homepage": "https://github.com/abeluzhenko/sco-bot#readme",
+    "devDependencies": {
+        "@types/jasmine": "^3.5.1",
+        "@types/node": "^13.5.0",
+        "karma": "^4.4.1",
+        "karma-chrome-launcher": "^3.1.0",
+        "karma-html-reporter": "^0.2.7",
+        "karma-jasmine": "^3.1.0",
+        "karma-jasmine-html": "^1.0.0",
+        "karma-jasmine-html-reporter": "^1.5.1",
+        "karma-sourcemap-loader": "^0.3.7",
+        "karma-webpack": "^4.0.2",
+        "ts-loader": "^6.2.1",
+        "tslint": "^6.0.0",
+        "typescript": "^3.7.5",
+        "webpack": "^4.41.5",
+        "webpack-cli": "^3.3.10"
+    }
+}
