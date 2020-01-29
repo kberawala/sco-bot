@@ -52,9 +52,11 @@
  * Copyright (c) 2009-2017, Cybercussion Interactive LLC. All rights reserved.
  * As of 3.0.0 this code is under a Creative Commons Attribution-ShareAlike 4.0 International License.
  */
-export function SCOBot(options) {
+export function SCOBot(dependencies, options) {
     // Constructor ////////////
     "use strict";
+    // Temporary dependency inversion
+    const { SCOBotUtil, scorm } = dependencies;
     /** @default version, createDate, modifiedDate, prefix, launch_data, interaction_mode, success_status, location, completion_status, suspend_data, mode, scaled_passing_score, totalInteractions, totalObjectives, startTime */
     var Utl      = SCOBotUtil, // Hook for jQuery 'like' functionality
         defaults = {

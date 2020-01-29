@@ -29,11 +29,13 @@
  * Copyright (c) 2009-2017, Cybercussion Interactive LLC.
  * As of 3.0.0 this code is under a Creative Commons Attribution-ShareAlike 4.0 International License.
  */
-export function SCOBot_API_1484_11(options) {
+export function SCOBot_API_1484_11(dependencies, options) {
     // Constructor
     "use strict";
-    var Utl      = SCOBotUtil,
-        defaults = {
+    
+    const { SCOBotUtil: Utl, scorm } = dependencies;
+
+    var defaults = {
             version:     "4.1.6",
             createdate:  "07/17/2010 08:15AM",
             moddate:     "03/04/2016 12:24PM",

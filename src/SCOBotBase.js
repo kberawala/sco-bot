@@ -46,12 +46,13 @@
  * Copyright (c) 2009-2017, Cybercussion Interactive LLC.
  * As of 3.0.0 this code is under a Creative Commons Attribution-ShareAlike 4.0 International License.
  */
-export function SCOBotBase(options) {
+export function SCOBotBase(dependencies, options) {
     // Constructor ////////////
     "use strict";
+    // Temporary dependency inversion
+    const { SCOBotUtil: Utl, SCOBot_API_1484_11 } = dependencies;
     // Please edit run time options or override them when you instantiate this object.
-    var Utl      = SCOBotUtil,
-        defaults = {
+    var defaults = {
             version:           "4.1.6",
             createDate:        "04/05/2011 08:56AM",
             modifiedDate:      "03/04/2016 12:24AM",
@@ -1428,7 +1429,9 @@ export function SCOBotBase(options) {
             settings.standalone = true;
             API.version = "2004";
             // May or may not be provided (standalone) if not, this is null (DOA)
-            API.path = typeof SCOBot_API_1484_11 === 'function' ? new SCOBot_API_1484_11({cmi: settings.cmi}) : null;
+            API.path = typeof SCOBot_API_1484_11 === 'function' 
+                ? new SCOBot_API_1484_11({ SCOBotUtil: Utl }, {cmi: settings.cmi}) 
+                : null;
             // API connection is not true for local in this scenario. isConnected() will not work for local in this
             // situation.
             //$(API.path).on('StoreData', function (e) {

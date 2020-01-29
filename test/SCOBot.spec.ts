@@ -1,10 +1,19 @@
-import { SCOBot } from '../src';
+import { SCOBotUtil, SCOBot, SCOBotBase, SCOBot_API_1484_11 } from '../src';
+
 
 describe('SCOBot', () => {
     let bot: SCOBot;
 
     beforeEach(() => {
-        bot = new SCOBot();
+        const scorm = new SCOBotBase({
+            SCOBotUtil,
+            SCOBot_API_1484_11
+        });
+
+        bot = new SCOBot({
+            SCOBotUtil,
+            scorm
+        });
     })
 
     it('should create a class instance', () => {

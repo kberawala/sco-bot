@@ -52,7 +52,7 @@
  * Copyright (c) 2009-2016, Cybercussion Interactive LLC. All rights reserved.
  * As of 3.0.0 this code is under a Creative Commons Attribution-ShareAlike 4.0 International License.
  */
-export const SCOBotUtil = function () {
+export const SCOBotUtil = (function () {
     // Constructor ///////////////
     "use strict";
     var version      = "1.0.4",
@@ -578,4 +578,4 @@ export const SCOBotUtil = function () {
         Events: Events
     };
     //////////////////////////////
-}();
+})();
