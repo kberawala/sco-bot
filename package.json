@@ -2,7 +2,6 @@
     "name": "sco-bot",
     "version": "1.0.0",
     "description": "SCOBot npm package",
-    "private": true,
     "scripts": {
         "test": "karma start karma.conf.js",
         "build": "webpack"
